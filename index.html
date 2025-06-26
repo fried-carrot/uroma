@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uroma - Create Your Custom Scent</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>Uroma</h1>
+                <span class="tagline">createUroma.com</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#create">Create</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-background"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="typing-text" data-text="We Revolutionized"></span>
+                        <br>
+                        <span class="highlight typing-text" data-text="Personalized Custom Made Scent" data-delay="2000"></span>
+                    </h1>
+                    <p class="hero-subtitle fade-in-up" data-delay="4000">Fragrance should be personal, not premade.</p>
+                    <div class="hero-stats fade-in-up" data-delay="4500">
+                        <div class="stat">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Premium Ingredients</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">$6.99</span>
+                            <span class="stat-label">Sample Kit</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Custom Blend</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-cta fade-in-up" data-delay="5000">
+                    <button class="cta-button primary" onclick="scrollToSection('create')">
+                        <span>Create Your Scent</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="cta-button secondary" onclick="scrollToSection('process')">Learn Process</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Uroma?</h2>
+                    <p class="section-subtitle">We're redefining fragrance as self-expression</p>
+                </div>
+                <div class="problem-solution">
+                    <div class="problem-card">
+                        <h3>The Problem</h3>
+                        <p>Have you ever looked for a cologne but have had difficulty finding scents that fully embody you? It's quite expensive and draining to go shopping for colognes.</p>
+                    </div>
+                    <div class="solution-card">
+                        <h3>Our Solution</h3>
+                        <p>Uroma provides a personalized, at home, and cheap alternative while maintaining quality. Unlike mass produce scents, our blends are made from quality ingredients and tailored to your scent preferences and style.</p>
+                    </div>
+                </div>
+                <div class="value-proposition">
+                    <h3>At Uroma we Believe that</h3>
+                    <blockquote>"Fragrance should be Personal, not Pre-made"</blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section id="create" class="create-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Create Your Custom Scent</h2>
+                    <p class="section-subtitle">Build your personalized fragrance from premium ingredients</p>
+                </div>
+                
+                <div class="scent-builder">
+                    <div class="fragrance-pyramid">
+                        <div class="pyramid-section top-notes" data-category="top">
+                            <div class="pyramid-header">
+                                <h3>Top Notes</h3>
+                                <span class="pyramid-description">First impression • Fresh & Bright</span>
+                            </div>
+                            <div class="ingredient-grid">
+                                <div class="ingredient-card" data-ingredient="bergamot">
+                                    <span class="ingredient-name">Bergamot</span>
+                                </div>
+                                <div class="ingredient-card" data-ingredient="lemon">
+                                    <span class="ingredient-name">Lemon</span>
+                                </div>
+                                <div class="ingredient-card" data-ingredient="grapefruit">
+                                    <span class="ingredient-name">Grapefruit</span>
+                                </div>
+                                <div class="ingredient-card" data-ingredient="neroli">
+                                    <span class="ingredient-name">Neroli</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="pyramid-section heart-notes" data-category="heart">
+                            <div class="pyramid-header">
+                                <h3>Heart Notes</h3>
+                                <span class="pyramid-description">Main character • Rich & Complex</span>
+                            </div>
+                            <div class="ingredient-grid">
+                                <div class="ingredient-card" data-ingredient="rose">
+                                    <span class="ingredient-name">Rose</span>
+                                </div>
+                                <div class="ingredient-card" data-ingredient="jasmine">
+                                    <span class="ingredient-name">Jasmine</span>
+                                </div>
+                                <div class="ingredient-card" data-ingredient="lavender">
+                                    <span class="ingredient-name">Lavender</span>
+                                </div>
+                                <div class="ingredient-card" data-ingredient="geranium">
+                                    <span class="ingredient-name">Geranium</span>
+                                </div>
+                                <div class="ingredient-card" data-ingredient="ylang-ylang">
+                                    <span class="ingredient-name">Ylang Ylang</span>
+                                </div>
+                                <div class="ingredient-card" data-ingredient="black-pepper">
+                                    <span class="ingredient-name">Black Pepper</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="pyramid-section base-notes" data-category="base">
+                            <div class="pyramid-header">
+                                <h3>Base Notes</h3>
+                                <span class="pyramid-description">Foundation • Deep & Lasting</span>
+                            </div>
+                            <div class="ingredient-grid">
+                                <div class="ingredient-card" data-ingredient="sandalwood">
+                                    <span class="ingredient-name">Sandalwood</span>
+                                </div>
+                                <div class="ingredient-card" data-ingredient="cedarwood">
+                                    <span class="ingredient-name">Cedarwood</span>
+                                </div>
+                                <div class="ingredient-card" data-ingredient="vetiver">
+                                    <span class="ingredient-name">Vetiver</span>
+                                </div>
+                                <div class="ingredient-card" data-ingredient="patchouli">
+                                    <span class="ingredient-name">Patchouli</span>
+                                </div>
+                                <div class="ingredient-card" data-ingredient="tobacco">
+                                    <span class="ingredient-name">Tobacco</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blend-panel">
+                        <div class="blend-summary">
+                            <h3>Your Custom Blend</h3>
+                            <div id="selected-ingredients">
+                                <div class="empty-state">
+                                    <p>Select ingredients to create your unique scent</p>
+                                </div>
+                            </div>
+                            <div class="blend-intensity">
+                                <div class="intensity-meter">
+                                    <span class="intensity-label">Blend Strength</span>
+                                    <div class="intensity-bar">
+                                        <div class="intensity-fill" id="intensity-fill"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="ordering-options">
+                            <div class="sample-options">
+                                <h4>Order Samples</h4>
+                                <p class="option-description">Test different combinations at home</p>
+                                <div class="sample-selector">
+                                    <select id="sample-count">
+                                        <option value="5">5 samples - $6.99</option>
+                                        <option value="6">6 samples - $8.98</option>
+                                        <option value="7">7 samples - $10.97</option>
+                                        <option value="8">8 samples - $12.96</option>
+                                        <option value="9">9 samples - $14.95</option>
+                                        <option value="10">10 samples - $16.94</option>
+                                    </select>
+                                </div>
+                                <button class="order-btn samples" onclick="orderSamples()">Order Samples</button>
+                            </div>
+                            
+                            <div class="bottle-options">
+                                <h4>Order Full Bottle</h4>
+                                <p class="option-description">Your perfect scent, ready to wear</p>
+                                <div class="bottle-sizes">
+                                    <div class="bottle-option" data-size="30ml" data-price="42.99">
+                                        <div class="bottle-info">
+                                            <span class="bottle-size">30ml</span>
+                                            <span class="bottle-price">$42.99</span>
+                                        </div>
+                                        <button class="order-btn bottle" onclick="orderBottle('30ml', 42.99)">Order 30ml</button>
+                                    </div>
+                                    <div class="bottle-option" data-size="50ml" data-price="59.99">
+                                        <div class="bottle-info">
+                                            <span class="bottle-size">50ml</span>
+                                            <span class="bottle-price">$59.99</span>
+                                        </div>
+                                        <button class="order-btn bottle featured" onclick="orderBottle('50ml', 59.99)">Order 50ml</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="how-it-works">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Method to the Madness</h2>
+                    <p class="section-subtitle">We give people like us an array of samples before ordering a cologne</p>
+                </div>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Order Samples</h3>
+                            <p>They are able to customize and personalize smells online and test them out. We charge $6.99 for 5 samples and $1.99 for each extra one.</p>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Test Multiple Rounds</h3>
+                            <p>We do multiple rounds of this. Eventually when they find a specific smell they want we ship it over.</p>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Order Your Bottle</h3>
+                            <p>For the actual bottles we charge $42.99 for the 30ml bottle and $59.99 for the 50ml bottle. This lets our people stay connected with us and build customer loyalty.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Uroma. Fragrance should be personal, not premade.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
