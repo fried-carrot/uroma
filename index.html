@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Serif+4:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
@@ -33,7 +33,7 @@
                     <h1 class="hero-title">
                         <span class="typing-text" data-text="We Revolutionized"></span>
                         <br>
-                        <span class="highlight typing-text" data-text="Personalized Custom Made Scent" data-delay="2000"></span>
+                        <span class="highlight typing-text" data-text="Personalized Custom Made Cologne" data-delay="2000"></span>
                     </h1>
                     <p class="hero-subtitle fade-in-up" data-delay="4000">Fragrance should be personal, not premade.</p>
                     <div class="hero-stats fade-in-up" data-delay="4500">
@@ -101,18 +101,18 @@
                                 <span class="pyramid-description">First impression • Fresh & Bright</span>
                             </div>
                             <div class="ingredient-grid">
-                                <div class="ingredient-card" data-ingredient="bergamot">
+                                <button class="ingredient-card" data-ingredient="bergamot" onclick="toggleIngredient(this); console.log('Bergamot clicked!')">
                                     <span class="ingredient-name">Bergamot</span>
-                                </div>
-                                <div class="ingredient-card" data-ingredient="lemon">
+                                </button>
+                                <button class="ingredient-card" data-ingredient="lemon" onclick="toggleIngredient(this); console.log('Lemon clicked!')">
                                     <span class="ingredient-name">Lemon</span>
-                                </div>
-                                <div class="ingredient-card" data-ingredient="grapefruit">
+                                </button>
+                                <button class="ingredient-card" data-ingredient="grapefruit" onclick="toggleIngredient(this); console.log('Grapefruit clicked!')">
                                     <span class="ingredient-name">Grapefruit</span>
-                                </div>
-                                <div class="ingredient-card" data-ingredient="neroli">
+                                </button>
+                                <button class="ingredient-card" data-ingredient="neroli" onclick="toggleIngredient(this); console.log('Neroli clicked!')">
                                     <span class="ingredient-name">Neroli</span>
-                                </div>
+                                </button>
                             </div>
                         </div>
                         
@@ -122,24 +122,24 @@
                                 <span class="pyramid-description">Main character • Rich & Complex</span>
                             </div>
                             <div class="ingredient-grid">
-                                <div class="ingredient-card" data-ingredient="rose">
+                                <button class="ingredient-card" data-ingredient="rose" onclick="toggleIngredient(this); console.log('Rose clicked!')">
                                     <span class="ingredient-name">Rose</span>
-                                </div>
-                                <div class="ingredient-card" data-ingredient="jasmine">
+                                </button>
+                                <button class="ingredient-card" data-ingredient="jasmine" onclick="toggleIngredient(this); console.log('Jasmine clicked!')">
                                     <span class="ingredient-name">Jasmine</span>
-                                </div>
-                                <div class="ingredient-card" data-ingredient="lavender">
+                                </button>
+                                <button class="ingredient-card" data-ingredient="lavender" onclick="toggleIngredient(this); console.log('Lavender clicked!')">
                                     <span class="ingredient-name">Lavender</span>
-                                </div>
-                                <div class="ingredient-card" data-ingredient="geranium">
+                                </button>
+                                <button class="ingredient-card" data-ingredient="geranium" onclick="toggleIngredient(this); console.log('Geranium clicked!')">
                                     <span class="ingredient-name">Geranium</span>
-                                </div>
-                                <div class="ingredient-card" data-ingredient="ylang-ylang">
+                                </button>
+                                <button class="ingredient-card" data-ingredient="ylang-ylang" onclick="toggleIngredient(this); console.log('Ylang Ylang clicked!')">
                                     <span class="ingredient-name">Ylang Ylang</span>
-                                </div>
-                                <div class="ingredient-card" data-ingredient="black-pepper">
+                                </button>
+                                <button class="ingredient-card" data-ingredient="black-pepper" onclick="toggleIngredient(this); console.log('Black Pepper clicked!')">
                                     <span class="ingredient-name">Black Pepper</span>
-                                </div>
+                                </button>
                             </div>
                         </div>
                         
@@ -149,21 +149,21 @@
                                 <span class="pyramid-description">Foundation • Deep & Lasting</span>
                             </div>
                             <div class="ingredient-grid">
-                                <div class="ingredient-card" data-ingredient="sandalwood">
+                                <button class="ingredient-card" data-ingredient="sandalwood" onclick="toggleIngredient(this); console.log('Sandalwood clicked!')">
                                     <span class="ingredient-name">Sandalwood</span>
-                                </div>
-                                <div class="ingredient-card" data-ingredient="cedarwood">
+                                </button>
+                                <button class="ingredient-card" data-ingredient="cedarwood" onclick="toggleIngredient(this); console.log('Cedarwood clicked!')">
                                     <span class="ingredient-name">Cedarwood</span>
-                                </div>
-                                <div class="ingredient-card" data-ingredient="vetiver">
+                                </button>
+                                <button class="ingredient-card" data-ingredient="vetiver" onclick="toggleIngredient(this); console.log('Vetiver clicked!')">
                                     <span class="ingredient-name">Vetiver</span>
-                                </div>
-                                <div class="ingredient-card" data-ingredient="patchouli">
+                                </button>
+                                <button class="ingredient-card" data-ingredient="patchouli" onclick="toggleIngredient(this); console.log('Patchouli clicked!')">
                                     <span class="ingredient-name">Patchouli</span>
-                                </div>
-                                <div class="ingredient-card" data-ingredient="tobacco">
+                                </button>
+                                <button class="ingredient-card" data-ingredient="tobacco" onclick="toggleIngredient(this); console.log('Tobacco clicked!')">
                                     <span class="ingredient-name">Tobacco</span>
-                                </div>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -174,14 +174,6 @@
                             <div id="selected-ingredients">
                                 <div class="empty-state">
                                     <p>Select ingredients to create your unique scent</p>
-                                </div>
-                            </div>
-                            <div class="blend-intensity">
-                                <div class="intensity-meter">
-                                    <span class="intensity-label">Blend Strength</span>
-                                    <div class="intensity-bar">
-                                        <div class="intensity-fill" id="intensity-fill"></div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -219,7 +211,7 @@
                                             <span class="bottle-size">50ml</span>
                                             <span class="bottle-price">$59.99</span>
                                         </div>
-                                        <button class="order-btn bottle featured" onclick="orderBottle('50ml', 59.99)">Order 50ml</button>
+                                        <button class="order-btn bottle" onclick="orderBottle('50ml', 59.99)">Order 50ml</button>
                                     </div>
                                 </div>
                             </div>

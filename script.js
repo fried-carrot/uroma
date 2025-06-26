@@ -1,10 +1,10 @@
-let selectedIngredients = {
+window.selectedIngredients = {
     top: [],
     heart: [],
     base: []
 };
 
-let cart = {
+window.cart = {
     samples: [],
     bottles: []
 };
@@ -62,13 +62,25 @@ function scrollToSection(sectionId) {
 }
 
 function initializeIngredientSelection() {
+    // Direct approach with force event attachment
     const ingredientCards = document.querySelectorAll('.ingredient-card');
+    console.log('Initializing ingredient selection for', ingredientCards.length, 'cards');
     
-    ingredientCards.forEach(card => {
-        card.addEventListener('click', function() {
-            toggleIngredient(this);
-        });
+    ingredientCards.forEach((card, index) => {
+        console.log(`Setting up card ${index}:`, card.dataset.ingredient);
         
+        // Remove any existing onclick
+        card.removeAttribute('onclick');
+        
+        // Add click listener with capture and immediate handling
+        card.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Card clicked:', this.dataset.ingredient);
+            toggleIngredient(this);
+        }, { capture: true });
+        
+        // Add hover effects
         card.addEventListener('mouseenter', function() {
             showIngredientTooltip(this);
         });
@@ -112,15 +124,15 @@ function animateDeselection(element) {
 }
 
 function addIngredient(category, ingredient) {
-    if (!selectedIngredients[category].includes(ingredient)) {
-        selectedIngredients[category].push(ingredient);
+    if (!window.selectedIngredients[category].includes(ingredient)) {
+        window.selectedIngredients[category].push(ingredient);
     }
 }
 
 function removeIngredient(category, ingredient) {
-    const index = selectedIngredients[category].indexOf(ingredient);
+    const index = window.selectedIngredients[category].indexOf(ingredient);
     if (index > -1) {
-        selectedIngredients[category].splice(index, 1);
+        window.selectedIngredients[category].splice(index, 1);
     }
 }
 
@@ -137,52 +149,51 @@ function updateBlendSummary() {
     } else {
         let summaryHTML = '<div class="blend-details">';
         
-        if (selectedIngredients.top.length > 0) {
+        if (window.selectedIngredients.top.length > 0) {
             summaryHTML += `
                 <div class="note-group top">
                     <div class="note-header">
                         <span class="note-type">Top Notes</span>
-                        <span class="note-count">${selectedIngredients.top.length}</span>
+                        <span class="note-count">${window.selectedIngredients.top.length}</span>
                     </div>
-                    <div class="note-ingredients">${selectedIngredients.top.join(' • ')}</div>
+                    <div class="note-ingredients">${window.selectedIngredients.top.join(' • ')}</div>
                 </div>
             `;
         }
         
-        if (selectedIngredients.heart.length > 0) {
+        if (window.selectedIngredients.heart.length > 0) {
             summaryHTML += `
                 <div class="note-group heart">
                     <div class="note-header">
                         <span class="note-type">Heart Notes</span>
-                        <span class="note-count">${selectedIngredients.heart.length}</span>
+                        <span class="note-count">${window.selectedIngredients.heart.length}</span>
                     </div>
-                    <div class="note-ingredients">${selectedIngredients.heart.join(' • ')}</div>
+                    <div class="note-ingredients">${window.selectedIngredients.heart.join(' • ')}</div>
                 </div>
             `;
         }
         
-        if (selectedIngredients.base.length > 0) {
+        if (window.selectedIngredients.base.length > 0) {
             summaryHTML += `
                 <div class="note-group base">
                     <div class="note-header">
                         <span class="note-type">Base Notes</span>
-                        <span class="note-count">${selectedIngredients.base.length}</span>
+                        <span class="note-count">${window.selectedIngredients.base.length}</span>
                     </div>
-                    <div class="note-ingredients">${selectedIngredients.base.join(' • ')}</div>
+                    <div class="note-ingredients">${window.selectedIngredients.base.join(' • ')}</div>
                 </div>
             `;
         }
         
         summaryHTML += '</div>';
+        summaryElement.innerHTML = summaryHTML;
     }
-    
-    summaryElement.innerHTML = summaryHTML;
 }
 
 function getTotalSelectedCount() {
-    return selectedIngredients.top.length + 
-           selectedIngredients.heart.length + 
-           selectedIngredients.base.length;
+    return window.selectedIngredients.top.length + 
+           window.selectedIngredients.heart.length + 
+           window.selectedIngredients.base.length;
 }
 
 function updateIntensityMeter() {
@@ -191,7 +202,9 @@ function updateIntensityMeter() {
     const intensity = Math.min((totalSelected / maxIngredients) * 100, 100);
     
     const intensityFill = document.getElementById('intensity-fill');
-    intensityFill.style.width = intensity + '%';
+    if (intensityFill) {
+        intensityFill.style.width = intensity + '%';
+    }
 }
 
 function updateSamplePricing() {
@@ -236,9 +249,9 @@ function orderSamples() {
     let price = sampleCount <= 5 ? 6.99 : 6.99 + ((sampleCount - 5) * 1.99);
     
     const blend = {
-        top: [...selectedIngredients.top],
-        heart: [...selectedIngredients.heart],
-        base: [...selectedIngredients.base]
+        top: [...window.selectedIngredients.top],
+        heart: [...window.selectedIngredients.heart],
+        base: [...window.selectedIngredients.base]
     };
     
     const sampleOrder = {
@@ -249,7 +262,7 @@ function orderSamples() {
         timestamp: new Date().toISOString()
     };
     
-    cart.samples.push(sampleOrder);
+    window.cart.samples.push(sampleOrder);
     
     showOrderConfirmation('samples', sampleCount, price, blend);
 }
@@ -263,9 +276,9 @@ function orderBottle(size, price) {
     }
     
     const blend = {
-        top: [...selectedIngredients.top],
-        heart: [...selectedIngredients.heart],
-        base: [...selectedIngredients.base]
+        top: [...window.selectedIngredients.top],
+        heart: [...window.selectedIngredients.heart],
+        base: [...window.selectedIngredients.base]
     };
     
     const bottleOrder = {
@@ -276,7 +289,7 @@ function orderBottle(size, price) {
         timestamp: new Date().toISOString()
     };
     
-    cart.bottles.push(bottleOrder);
+    window.cart.bottles.push(bottleOrder);
     
     showOrderConfirmation('bottle', size, price, blend);
 }
@@ -373,7 +386,7 @@ function showNotification(message, type = 'info') {
 }
 
 function clearBlend() {
-    selectedIngredients = { top: [], heart: [], base: [] };
+    window.selectedIngredients = { top: [], heart: [], base: [] };
     
     document.querySelectorAll('.ingredient-card.selected').forEach(card => {
         card.classList.remove('selected');
