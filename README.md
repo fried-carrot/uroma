@@ -1,14 +1,14 @@
 # Uroma - Custom Fragrance Builder
 
-A web application for creating custom fragrances with a clean, modern design.
+A web application for creating custom fragrances
 
 ## Features
 
 ### Design
-- Apple-inspired interface with clean, minimalist design
+- OlfactoryNYC interface with black, white, and gold color scheme
 - Gold gradient themes throughout the application
 - Glassmorphism effects with backdrop blur and transparency
-- Aligned borders on pyramid sections
+- Aligned borders on pyramid/notes sections
 - Responsive layout that works on all devices
 
 ### Fragrance Pyramid Builder
