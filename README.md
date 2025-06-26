@@ -1,30 +1,30 @@
 # Uroma - Custom Fragrance Builder
 
-A sophisticated web application for creating custom fragrances with an Apple-like design aesthetic.
+A web application for creating custom fragrances with a clean, modern design.
 
 ## Features
 
-### 🎨 Design
-- **Apple-inspired interface** with clean, minimalist design
-- **Gold gradient themes** throughout the application
-- **Glassmorphism effects** with backdrop blur and transparency
-- **Perfectly aligned borders** on pyramid sections
-- **Responsive layout** that works on all devices
+### Design
+- Apple-inspired interface with clean, minimalist design
+- Gold gradient themes throughout the application
+- Glassmorphism effects with backdrop blur and transparency
+- Aligned borders on pyramid sections
+- Responsive layout that works on all devices
 
-### 🔺 Fragrance Pyramid Builder
-- **Three-tier pyramid system**: Top Notes, Heart Notes, Base Notes
-- **15 premium ingredients** to choose from:
-  - **Top Notes**: Bergamot, Lemon, Grapefruit, Neroli (fresh & bright)
-  - **Heart Notes**: Rose, Jasmine, Lavender, Geranium, Ylang Ylang, Black Pepper (rich & complex)  
-  - **Base Notes**: Sandalwood, Cedarwood, Vetiver, Patchouli, Tobacco (deep & lasting)
-- **Visual selection feedback** with gold highlighting
-- **Real-time blend summary** showing selected ingredients
+### Fragrance Pyramid Builder
+- Three-tier pyramid system: Top Notes, Heart Notes, Base Notes
+- 15 premium ingredients to choose from:
+  - Top Notes: Bergamot, Lemon, Grapefruit, Neroli (fresh & bright)
+  - Heart Notes: Rose, Jasmine, Lavender, Geranium, Ylang Ylang, Black Pepper (rich & complex)  
+  - Base Notes: Sandalwood, Cedarwood, Vetiver, Patchouli, Tobacco (deep & lasting)
+- Visual selection feedback with gold highlighting
+- Real-time blend summary showing selected ingredients
 
-### 🛒 Order System
-- **Sample ordering**: 5-10 samples starting at $6.99
-- **Full bottles**: 30ml ($42.99) and 50ml ($59.99) options
-- **Order confirmation modals** with complete blend details
-- **Custom blend tracking** throughout the order process
+### Order System
+- Sample ordering: 5-10 samples starting at $6.99
+- Full bottles: 30ml ($42.99) and 50ml ($59.99) options
+- Order confirmation modals with complete blend details
+- Custom blend tracking throughout the order process
 
 ## Technical Implementation
 
@@ -63,28 +63,28 @@ A sophisticated web application for creating custom fragrances with an Apple-lik
 
 ## Features Implemented
 
-✅ **Perfect border alignment** on all pyramid sections  
-✅ **Complete order functionality** with detailed modals  
-✅ **Visual ingredient selection** with gold highlighting  
-✅ **Real-time blend summary** updates  
-✅ **Responsive design** for all screen sizes  
-✅ **Apple-like gradients** and styling throughout  
-✅ **Glassmorphism effects** with backdrop blur  
+- Border alignment on all pyramid sections  
+- Complete order functionality with detailed modals  
+- Visual ingredient selection with gold highlighting  
+- Real-time blend summary updates  
+- Responsive design for all screen sizes  
+- Apple-like gradients and styling throughout  
+- Glassmorphism effects with backdrop blur  
 
 ## Browser Compatibility
 
-- **Chrome/Chromium** - Full support
-- **Safari** - Full support with webkit prefixes
-- **Firefox** - Full support
-- **Edge** - Full support
+- Chrome/Chromium - Full support
+- Safari - Full support with webkit prefixes
+- Firefox - Full support
+- Edge - Full support
 
 ## Future Enhancements
 
-- **User accounts** and order history
-- **Ingredient descriptions** and education
-- **Scent strength customization**
-- **Seasonal ingredient collections**
-- **Social sharing** of custom blends
+- User accounts and order history
+- Ingredient descriptions and education
+- Scent strength customization
+- Seasonal ingredient collections
+- Social sharing of custom blends
 
 ## License
 
@@ -92,4 +92,4 @@ This project is open source and available under the MIT License.
 
 ---
 
-**"Fragrance should be personal, not premade."** - Uroma
+"Fragrance should be personal, not premade." - Uroma

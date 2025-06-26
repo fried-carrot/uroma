@@ -62,25 +62,9 @@ function scrollToSection(sectionId) {
 }
 
 function initializeIngredientSelection() {
-    // Direct approach with force event attachment
     const ingredientCards = document.querySelectorAll('.ingredient-card');
-    console.log('Initializing ingredient selection for', ingredientCards.length, 'cards');
     
-    ingredientCards.forEach((card, index) => {
-        console.log(`Setting up card ${index}:`, card.dataset.ingredient);
-        
-        // Remove any existing onclick
-        card.removeAttribute('onclick');
-        
-        // Add click listener with capture and immediate handling
-        card.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            console.log('Card clicked:', this.dataset.ingredient);
-            toggleIngredient(this);
-        }, { capture: true });
-        
-        // Add hover effects
+    ingredientCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
             showIngredientTooltip(this);
         });
