@@ -9,11 +9,7 @@ window.cart = {
     bottles: []
 };
 
-document.addEventListener('DOMContentLoaded', function() {
-    initializeAnimations();
-    initializeIngredientSelection();
-    updateSamplePricing();
-});
+// This will be replaced by the new initialization below
 
 function initializeAnimations() {
     const typingTexts = document.querySelectorAll('.typing-text');
@@ -59,6 +55,23 @@ function scrollToSection(sectionId) {
         top: offsetTop,
         behavior: 'smooth'
     });
+}
+
+// Ingredient selection functionality
+function selectIngredient(element) {
+    const ingredient = element.dataset.ingredient;
+    const category = element.closest('.pyramid-section').dataset.category;
+    
+    if (element.classList.contains('selected')) {
+        element.classList.remove('selected');
+        removeIngredient(category, ingredient);
+    } else {
+        element.classList.add('selected');
+        addIngredient(category, ingredient);
+    }
+    
+    updateBlendSummary();
+    updateIntensityMeter();
 }
 
 function initializeIngredientSelection() {
@@ -379,6 +392,69 @@ function clearBlend() {
     updateBlendSummary();
     updateIntensityMeter();
 }
+
+// Slideshow functionality
+let currentSlide = 0;
+let slideInterval;
+
+function initializeSlideshow() {
+    const slideTrack = document.querySelector('.slide-track');
+    const totalSlides = document.querySelectorAll('.slide').length;
+    
+    // Auto-advance slideshow
+    slideInterval = setInterval(() => {
+        nextSlide();
+    }, 5000);
+    
+    // Pause on hover
+    const slideshow = document.querySelector('.steps-slideshow');
+    if (slideshow) {
+        slideshow.addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+        
+        slideshow.addEventListener('mouseleave', () => {
+            slideInterval = setInterval(() => {
+                nextSlide();
+            }, 5000);
+        });
+    }
+}
+
+function goToSlide(slideIndex) {
+    const slideTrack = document.querySelector('.slide-track');
+    const totalSlides = document.querySelectorAll('.slide').length;
+    const dots = document.querySelectorAll('.slide-dot');
+    
+    currentSlide = slideIndex;
+    const translateX = -currentSlide * (100 / totalSlides);
+    
+    slideTrack.style.transform = `translateX(${translateX}%)`;
+    
+    // Update active dot
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentSlide].classList.add('active');
+}
+
+function nextSlide() {
+    const totalSlides = document.querySelectorAll('.slide').length;
+    currentSlide = (currentSlide + 1) % totalSlides;
+    goToSlide(currentSlide);
+}
+
+function previousSlide() {
+    const totalSlides = document.querySelectorAll('.slide').length;
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    goToSlide(currentSlide);
+}
+
+// Initialize slideshow when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    initializeAnimations();
+    initializeIngredientSelection();
+    updateSamplePricing();
+    initializeSlideshow();
+});
 
 function showIngredientTooltip(element) {
     const ingredient = element.dataset.ingredient;

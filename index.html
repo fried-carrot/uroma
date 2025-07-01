@@ -100,19 +100,21 @@
                                 <h3>Top Notes</h3>
                                 <span class="pyramid-description">First impression • Fresh & Bright</span>
                             </div>
-                            <div class="ingredient-grid">
-                                <button class="ingredient-card" data-ingredient="bergamot" onclick="toggleIngredient(this)">
-                                    <span class="ingredient-name">Bergamot</span>
-                                </button>
-                                <button class="ingredient-card" data-ingredient="lemon" onclick="toggleIngredient(this)">
-                                    <span class="ingredient-name">Lemon</span>
-                                </button>
-                                <button class="ingredient-card" data-ingredient="grapefruit" onclick="toggleIngredient(this)">
-                                    <span class="ingredient-name">Grapefruit</span>
-                                </button>
-                                <button class="ingredient-card" data-ingredient="neroli" onclick="toggleIngredient(this)">
-                                    <span class="ingredient-name">Neroli</span>
-                                </button>
+                            <div class="scent-families">
+                                <div class="family-group citrus">
+                                    <h4 class="family-label">Citrus</h4>
+                                    <div class="ingredient-grid">
+                                        <button class="ingredient-card" data-ingredient="neroli" onclick="selectIngredient(this)">
+                                            <span class="ingredient-name">Neroli</span>
+                                        </button>
+                                        <button class="ingredient-card" data-ingredient="lemon" onclick="selectIngredient(this)">
+                                            <span class="ingredient-name">Lemon</span>
+                                        </button>
+                                        <button class="ingredient-card" data-ingredient="bergamot" onclick="selectIngredient(this)">
+                                            <span class="ingredient-name">Bergamot</span>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         
@@ -121,25 +123,49 @@
                                 <h3>Heart Notes</h3>
                                 <span class="pyramid-description">Main character • Rich & Complex</span>
                             </div>
-                            <div class="ingredient-grid">
-                                <button class="ingredient-card" data-ingredient="rose" onclick="toggleIngredient(this)">
-                                    <span class="ingredient-name">Rose</span>
-                                </button>
-                                <button class="ingredient-card" data-ingredient="jasmine" onclick="toggleIngredient(this)">
-                                    <span class="ingredient-name">Jasmine</span>
-                                </button>
-                                <button class="ingredient-card" data-ingredient="lavender" onclick="toggleIngredient(this)">
-                                    <span class="ingredient-name">Lavender</span>
-                                </button>
-                                <button class="ingredient-card" data-ingredient="geranium" onclick="toggleIngredient(this)">
-                                    <span class="ingredient-name">Geranium</span>
-                                </button>
-                                <button class="ingredient-card" data-ingredient="ylang-ylang" onclick="toggleIngredient(this)">
-                                    <span class="ingredient-name">Ylang Ylang</span>
-                                </button>
-                                <button class="ingredient-card" data-ingredient="black-pepper" onclick="toggleIngredient(this)">
-                                    <span class="ingredient-name">Black Pepper</span>
-                                </button>
+                            <div class="scent-families">
+                                <div class="family-group floral">
+                                    <h4 class="family-label">Floral</h4>
+                                    <div class="ingredient-grid">
+                                        <button class="ingredient-card" data-ingredient="rose" onclick="selectIngredient(this)">
+                                            <span class="ingredient-name">Rose</span>
+                                        </button>
+                                        <button class="ingredient-card" data-ingredient="iris" onclick="selectIngredient(this)">
+                                            <span class="ingredient-name">Iris</span>
+                                        </button>
+                                        <button class="ingredient-card" data-ingredient="geranium" onclick="selectIngredient(this)">
+                                            <span class="ingredient-name">Geranium</span>
+                                        </button>
+                                        <button class="ingredient-card" data-ingredient="ylang-ylang" onclick="selectIngredient(this)">
+                                            <span class="ingredient-name">Ylang Ylang</span>
+                                        </button>
+                                        <button class="ingredient-card" data-ingredient="lavender" onclick="selectIngredient(this)">
+                                            <span class="ingredient-name">Lavender</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="family-group gourmand">
+                                    <h4 class="family-label">Gourmand</h4>
+                                    <div class="ingredient-grid">
+                                        <button class="ingredient-card" data-ingredient="fig" onclick="selectIngredient(this)">
+                                            <span class="ingredient-name">Fig</span>
+                                        </button>
+                                        <button class="ingredient-card" data-ingredient="coconut" onclick="selectIngredient(this)">
+                                            <span class="ingredient-name">Coconut</span>
+                                        </button>
+                                        <button class="ingredient-card" data-ingredient="pear" onclick="selectIngredient(this)">
+                                            <span class="ingredient-name">Pear</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="family-group spicy">
+                                    <h4 class="family-label">Spicy</h4>
+                                    <div class="ingredient-grid">
+                                        <button class="ingredient-card" data-ingredient="tobacco" onclick="selectIngredient(this)">
+                                            <span class="ingredient-name">Tobacco</span>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         
@@ -148,22 +174,37 @@
                                 <h3>Base Notes</h3>
                                 <span class="pyramid-description">Foundation • Deep & Lasting</span>
                             </div>
-                            <div class="ingredient-grid">
-                                <button class="ingredient-card" data-ingredient="sandalwood" onclick="toggleIngredient(this)">
-                                    <span class="ingredient-name">Sandalwood</span>
-                                </button>
-                                <button class="ingredient-card" data-ingredient="cedarwood" onclick="toggleIngredient(this)">
-                                    <span class="ingredient-name">Cedarwood</span>
-                                </button>
-                                <button class="ingredient-card" data-ingredient="vetiver" onclick="toggleIngredient(this)">
-                                    <span class="ingredient-name">Vetiver</span>
-                                </button>
-                                <button class="ingredient-card" data-ingredient="patchouli" onclick="toggleIngredient(this)">
-                                    <span class="ingredient-name">Patchouli</span>
-                                </button>
-                                <button class="ingredient-card" data-ingredient="tobacco" onclick="toggleIngredient(this)">
-                                    <span class="ingredient-name">Tobacco</span>
-                                </button>
+                            <div class="scent-families">
+                                <div class="family-group woody">
+                                    <h4 class="family-label">Woody</h4>
+                                    <div class="ingredient-grid">
+                                        <button class="ingredient-card" data-ingredient="sandalwood" onclick="selectIngredient(this)">
+                                            <span class="ingredient-name">Sandalwood</span>
+                                        </button>
+                                        <button class="ingredient-card" data-ingredient="vetiver" onclick="selectIngredient(this)">
+                                            <span class="ingredient-name">Vetiver</span>
+                                        </button>
+                                        <button class="ingredient-card" data-ingredient="cedarwood" onclick="selectIngredient(this)">
+                                            <span class="ingredient-name">Cedarwood</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="family-group earthy">
+                                    <h4 class="family-label">Earthy</h4>
+                                    <div class="ingredient-grid">
+                                        <button class="ingredient-card" data-ingredient="patchouli" onclick="selectIngredient(this)">
+                                            <span class="ingredient-name">Patchouli</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="family-group spicy-base">
+                                    <h4 class="family-label">Spicy</h4>
+                                    <div class="ingredient-grid">
+                                        <button class="ingredient-card" data-ingredient="black-pepper" onclick="selectIngredient(this)">
+                                            <span class="ingredient-name">Black Pepper</span>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -227,27 +268,48 @@
                     <h2>Our Method to the Madness</h2>
                     <p class="section-subtitle">We give people like us an array of samples before ordering a cologne</p>
                 </div>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <h3>Order Samples</h3>
-                            <p>You are able to customize and personalize smells online through a website where you pick ingredients to use. We charge $6.99 for 5 samples and $1.99 for each extra one.</p>
+                <div class="slideshow-container">
+                    <div class="steps-slideshow">
+                        <div class="slide-track">
+                            <div class="step-card slide">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h3>Order Samples</h3>
+                                    <p>You are able to customize and personalize smells online through a website where you pick ingredients to use. We charge $6.99 for 5 samples and $1.99 for each extra one.</p>
+                                </div>
+                            </div>
+                            <div class="step-card slide">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h3>Test & Refine</h3>
+                                    <p>We do multiple rounds of this. After realizing what scent you want you can order for it.</p>
+                                </div>
+                            </div>
+                            <div class="step-card slide">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h3>Order Your Bottle</h3>
+                                    <p>For the actual bottles we charge $42.99 for the 30ml bottle and $59.99 for the 50ml bottle. This lets our people stay connected with us and build customer loyalty.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="step-card">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <h3>Test & Refine</h3>
-                            <p>We do multiple rounds of this. After realizing what scent you want you can order for it.</p>
+                    <div class="slideshow-controls">
+                        <button class="slide-btn prev-btn" onclick="previousSlide()">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="slide-indicators">
+                            <button class="slide-dot active" onclick="goToSlide(0)"></button>
+                            <button class="slide-dot" onclick="goToSlide(1)"></button>
+                            <button class="slide-dot" onclick="goToSlide(2)"></button>
                         </div>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <h3>Order Your Bottle</h3>
-                            <p>For the actual bottles we charge $42.99 for the 30ml bottle and $59.99 for the 50ml bottle. This lets our people stay connected with us and build customer loyalty.</p>
-                        </div>
+                        <button class="slide-btn next-btn" onclick="nextSlide()">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -256,7 +318,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Uroma. Fragrance should be personal, not premade.</p>
+            <p>&copy; 2025 Uroma. Fragrance should be personal, not premade.</p>
         </div>
     </footer>
 
